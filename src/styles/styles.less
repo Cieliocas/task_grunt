@@ -9,6 +9,14 @@ body * {
     box-sizing: border-box;
 }
 
+.container {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-login {
     width: 100vw;
     height: 100vh;
@@ -74,6 +82,15 @@ body * {
         background-color: #00ff88;
         cursor: pointer;
         box-shadow: 0px 10px 40px -12px #00ff8052;
+
+        &:hover {
+            box-shadow: 7px 5px 56px -14px #00ff8080;
+        }
+
+        &:active {
+                transform: scale(0.97);
+                box-shadow: 7px 5px 56px -10px #C3D900;
+            }
     }
 }
 
@@ -109,14 +126,17 @@ body * {
     }
 }
 
-@media only screen and (max-width: 950px) {
-    .card-login {
-        width: 85%;
+@media only screen and (max-width: 1100px) {
+    .container {
+        width: 100%;
+
     }
+
+
 }
 
 @media only screen and (max-width: 600px) {
-    .main-login {
+    .main-login, .container {
         flex-direction: column;
     }
     
@@ -139,6 +159,6 @@ body * {
     }
 
     .card-login {
-        width: 90%;
+        width: 100%;
     }
 }
